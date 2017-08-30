@@ -12,4 +12,12 @@ export class AppPage {
   getCheckboxCount(): any {
     return element(by.css('input[type="checkbox"]')).count();
   }
+
+  checkSubmitButtonDisabled(): any {
+    return element(by.css('button[type="submit"]')).isEnabled();
+  }
+
+  check(): any {
+    return element(by.css('input[type="checkbox"]')).click();
+  }
 }

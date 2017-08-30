@@ -16,4 +16,15 @@ describe('n0828 App', () => {
     page.navigateTo();
     expect(page.getCheckboxCount()).toBe(1);
   });
+
+  it(`should submit button is disabled`, () => {
+    page.navigateTo();
+    expect(page.checkSubmitButtonDisabled()).toBe(true);
+  });
+
+  it(`should submit button is disabled`, () => {
+    page.navigateTo();
+    page.check();
+    expect(page.checkSubmitButtonDisabled()).toBe(false);
+  });
 });
