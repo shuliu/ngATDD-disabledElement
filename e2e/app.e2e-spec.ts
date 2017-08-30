@@ -7,8 +7,13 @@ describe('n0828 App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it(`should have a submit button`, () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getSubmitButtonCount()).toBe(1);
+  });
+
+  it(`should have a submit button`, () => {
+    page.navigateTo();
+    expect(page.getCheckboxCount()).toBe(1);
   });
 });

@@ -5,7 +5,11 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getSubmitButtonCount(): any {
+    return element(by.css('button[type="submit"]')).count();
+  }
+
+  getCheckboxCount(): any {
+    return element(by.css('input[type="checkbox"]')).count();
   }
 }
