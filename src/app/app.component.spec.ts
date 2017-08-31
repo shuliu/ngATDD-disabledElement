@@ -32,11 +32,13 @@ describe('AppComponent', () => {
 
     describe(`Integration Test`, () => {
 
-      it(`<checkbox> 應該使用 onClick 拋轉元素 Event (target.checked)`, () => {
-        //
+      it(`checkbox 應該使用 onClick 拋轉元素 Event (target.checked)`, () => {
+        htmlElement = debugElement.query(By.css('input[type="checkbox"]')).nativeElement;
+        htmlElement.click();
+        expect(component.isDisabled).toBe(false);
       });
 
-      it(`<submit button> 應該使用 isDisabled 來判斷 disabled 狀態`, () => {
+      it(`submit button 應該使用 isDisabled 來判斷 disabled 狀態`, () => {
         // htmlElement = debugElement.query(By.css('')).nativeElement;
 
         component.isDisabled = true;
