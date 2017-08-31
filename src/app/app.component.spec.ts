@@ -50,6 +50,14 @@ describe('AppComponent', () => {
 
     });
 
+    describe(`Unit Test`, () => {
+
+      it(`Class 應有 isDisabled 且初始值為 true`, () => {
+        expect(component.isDisabled).toBe(true);
+      });
+
+    });
+
   });
 
 });
