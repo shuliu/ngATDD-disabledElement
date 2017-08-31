@@ -9,4 +9,7 @@ export class AppComponent {
   title = 'app';
   isDisabled = true;
 
+  onClick(event: Event) {
+    this.isDisabled = !(<HTMLSelectElement>event.target).checked;
+  }
 }
