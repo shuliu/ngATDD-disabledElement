@@ -12,7 +12,7 @@ describe('n0828 App', () => {
     expect(page.getSubmitButtonCount()).toBe(1);
   });
 
-  it(`should have a submit button`, () => {
+  it(`should have a checkbox`, () => {
     page.navigateTo();
     expect(page.getCheckboxCount()).toBe(1);
   });
